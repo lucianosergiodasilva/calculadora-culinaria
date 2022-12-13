@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Culinária</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/estilo2.css">
+</head>
+
+<body>
+    <main class="tela-principal">
+        
+        <section class="conteudos">
+        
+            <h1 class="centralizar">Calculadora Culinária</h1>
+
+            <p class='centralizar'>Farinha de trigo</p>
+
+            <div class="form-group grupo1">
+                <input type="number" min='0.25' max='10' step='0.25' name="numeroC" id="numeroC" class="inputPrincipal" value='' disabled />
+                <label for="celsius">Xícaras</label>
+
+                <div class="slider">
+                    <span id='min'>-</span>
+                    <input type="range" min='0.25' max='10' step='0.25' name="celsius" id="celsius" value='1'
+                        onChange='atualizaC(); atualizaF(); atualizaK(); atualizaG(); atualizaH()' class="animar" />
+                    <span id='max'>+</span>
+                </div>
+            </div>
+
+            <div class="convertidos">
+                <div class="form-group">
+                    <input type="number" name="numeroF" id="numeroF" value="16" disabled>
+                    <label for="numeroF"><i class="fa-solid fa-spoon"></i> Colheres de sopa</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="number" name="numeroH" id="numeroH" value="48" disabled>
+                    <label for="numeroH"><i class="fa-solid fa-spoon"></i> Colheres de chá</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="number" name="numeroK" id="numeroK" value="240" disabled>
+                    <label for="numeroK"><i class="fa-solid fa-droplet"></i> Mililitros (ml)</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="number" name="numeroG" id="numeroG" value="120" disabled>
+                    <label for="numeroG"><i class="fa-solid fa-weight-scale"></i> Gramas (g)</label>
+                </div>
+            </div>
+
+            <footer class="centralizar">Desenvolvido por Luciano Sergio &copy; 2022</footer>
+
+        </section>
+    </main>
+
+    <script src="./js/script2.js"></script>
+    <script src="https://kit.fontawesome.com/dad3f7dcfb.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

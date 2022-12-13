@@ -1,0 +1,163 @@
+/* Aula 19 Conversor de Temperaturas */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+}
+
+body {
+    background: rgb(246, 246, 246);
+}
+
+.conteudos {
+    max-width: 420px;
+    margin:20px auto;
+}
+.convertidos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.convertidos div{
+    width: 50%;
+}
+
+label{
+    font-size: 0.7em;
+    display: block;
+}
+
+.convertidos .form-group:nth-child(1) label{
+    color: tomato;
+}
+.convertidos .form-group:nth-child(2) label{
+    color: rgb(255, 158, 30);
+}
+.convertidos .form-group:nth-child(3) label{
+    color: rgb(19, 86, 219);
+}
+.form-group:nth-child(4) label{
+    color: rgb(27, 176, 97);
+}
+
+h1 {
+    font-size: 1.55rem;
+    margin: 0.625rem;
+}
+
+p{
+    font-size: 1rem;
+    /* margin-bottom:40px */
+}
+
+.form-group {
+    text-align: center;
+    border: 1px solid #e9e8e8;
+    padding: 1em;
+}
+
+/* Selecionando os dois primeiros elementos do form-group */
+.form-group:nth-child(2), .form-group:first-child{
+    border-top: none;
+    border-bottom: none;
+}
+.form-group:first-child{
+    border-right: none;
+}
+.form-group:nth-child(3){
+    border-right: none;
+}
+.form-group.grupo1{
+    border: none;
+}
+
+input:disabled {
+    cursor: not-allowed;
+}
+
+input[type=range] {
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    background-color: #141719;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+input[type=range]::-webkit-slider-thumb{
+    appearance: none;
+    background-color: #00b0ff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    box-shadow: 0 2px 2px rgba(0, 0, 0,3);
+}
+
+input[type=number]{
+    border: none;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.3em;
+}
+
+input.inputPrincipal{
+    background-color: #edebeb;
+    width: 140px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+#max,#min{
+    cursor: pointer;
+}
+
+
+/* div class onde estao spans e range */
+.slider {
+    display: flex;
+    justify-content:center;
+    margin-top: 1rem;
+}
+
+.slider span {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #191a1b;
+    margin: 0 20px;
+}
+
+.centralizar{ text-align: center;}
+
+footer{
+    font-size: 0.80rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: rgb(113, 110, 110);
+}
+
+/* ANIMACAO */
+
+/* Animar o input */
+@keyframes piscar {
+    0% {
+        filter: drop-shadow(0 0 15px #00b0ff);
+        -webkit-filter: drop-shadow(0 0 15px #00b0ff);
+        -moz-filter: drop-shadow(0 0 15px #00b0ff);
+        -o-filter: drop-shadow(0 0 15px #00b0ff);
+        -ms-filter: drop-shadow(0 0 15px #00b0ff);
+    }
+    100% {
+    }
+}
+
+.animar_ {
+    animation: piscar .75s infinite alternate;
+}
